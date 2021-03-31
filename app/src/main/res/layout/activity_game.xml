@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activityRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/game_screen_list"
+    android:orientation="vertical"
+    tools:context=".GameActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/ustBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="top">
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/zaman"
+            android:background="@drawable/zaman_kutu"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/klavika"
+            android:text="4:00"
+            android:paddingRight="10dp"
+            android:textColor="#DADADA"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:background="@drawable/can_kutusu"
+            android:id="@+id/anlikPuanText"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/klavika"
+            android:text="0"
+            android:gravity="center"
+            android:textColor="#FFEB3B"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/soruKategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ustBar"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:fontFamily="@font/klavika"
+        android:text="4 HARFLİ SORULAR"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+
+
+        android:id="@+id/soruKarti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soruKategori"
+        android:layout_margin="5dp"
+        android:background="@android:drawable/dialog_holo_light_frame"
+        app:cardBackgroundColor="#0585EC"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="20dp"
+        app:cardPreventCornerOverlap="false"
+        app:contentPadding="0dp">
+
+
+        <TextView
+            android:id="@+id/soruPuani"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:fontFamily="@font/klavika"
+            android:gravity="center"
+            android:padding="5dp"
+            android:rotation="-35"
+            android:textAllCaps="true"
+            android:textColor="#00FF0A"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/soru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/kabrio"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/countAnim"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/soruKarti"
+        android:layout_margin="5dp"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/countdown_anim" />
+
+    <LinearLayout
+        android:id="@+id/soruKismi1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/countAnim"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf4"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf5"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/soruKismi2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soruKismi1"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf6"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf7"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf8"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf9"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tahminKismi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/soruKismi2"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/cevapAlButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@+id/cevapGonderButton"
+            android:fontFamily="@font/klavika"
+            android:hint="Tahmini girin.."
+            android:textColor="#D3D3D3" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/cevapGonderButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/send"
+
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tahminKismi"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <ImageView
+            android:id="@+id/durdurButton"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/durdur_button" />
+
+        <ImageView
+            android:id="@+id/pasButton"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/pas_button" />
+
+        <ImageView
+            android:id="@+id/harfAlButton"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/harf_al_button" />
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/soundAnim"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        app:lottie_rawRes="@raw/sound_anim" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/tebriklerAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/tebrikler_anim2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_toLeftOf="@+id/soundAnim"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/can1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="9dp"
+        android:src="@drawable/heart"
+        />
+
+    <ImageView
+        android:id="@+id/can2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="9dp"
+        android:src="@drawable/heart"
+        />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="9dp"
+        android:src="@drawable/heart_bos" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
