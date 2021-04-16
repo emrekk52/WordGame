@@ -1,6 +1,6 @@
 # WordGame
 
-* TV2'de yayınlanan Ali İhsan Varol'un sunduğu Kelime Oyunu programından yola çıkılarak yapılmaya başlanmıştır
+* Teve 2'de yayınlanan Ali İhsan Varol'un sunduğu Kelime Oyunu programından yola çıkılarak mobilde tasarlanmıştır
 
 * Geliştirme aşaması devam etmektedir..
 
