@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#004305B5"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/truly"
+        android:text="bize,"
+        android:textColor="#57525E"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/truly"
+        android:text="soru gönder"
+        android:textColor="#4A484C"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt2">
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/klavika"
+                android:text="Soru gir"
+                android:textColor="@color/purple_700" />
+
+            <EditText
+                android:id="@+id/soruAlEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/purple_500"
+                android:fontFamily="sans-serif-medium"
+                android:hint="sorunuzu girin"
+                android:maxLength="100"
+                android:textColor="@color/purple_500"
+                android:textColorHint="@color/purple_700"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/soruUyari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="-15dp"
+                android:layout_marginBottom="10dp"
+                android:animateLayoutChanges="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="soru girme alanı boş bırakılamaz!"
+                android:textColor="#AEFD0033"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/klavika"
+                android:text="Cevap uzunluğunu seçin"
+                android:textColor="@color/purple_700" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/spinner_background"
+                android:fontFamily="@font/kabrio"
+                android:textColor="@color/purple_500" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/klavika"
+                android:text="Cevap gir"
+                android:textColor="@color/purple_700" />
+
+            <EditText
+                android:id="@+id/cevapAlEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/purple_500"
+                android:fontFamily="sans-serif-medium"
+                android:hint="cevabınızı girin"
+                android:textColor="@color/purple_500"
+                android:textColorHint="@color/purple_700"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/cevapUyari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:animateLayoutChanges="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="cevap alanı boş bırakılamaz!"
+                android:textColor="#AEFD0033"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cevapKarakterUyari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:animateLayoutChanges="true"
+                android:fontFamily="sans-serif-medium"
+                android:text="cevap alanı seçilen uzunluğa ulaşmadı!"
+                android:textColor="#AEFD0033"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="15dp"
+                    android:padding="2dp"
+                    android:fontFamily="@font/klavika"
+                    android:gravity="left"
+                    android:text="Gönderilen sorular incelemeden geçtikten\nsonra yayınlanır."
+                    android:textColor="#260471"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/gonderButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/gonderButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="@font/kabrio"
+                    android:text="gönder"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

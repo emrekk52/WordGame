@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmerGonderilenSorular"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-20dp"
+    android:maxHeight="160dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_margin="3dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            app:lottie_rawRes="@raw/rotate"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/avatar5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tarihZaman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/klavika"
+            android:gravity="center"
+            android:maxLength="9"
+            android:text="Sal\n22:35"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/timeLine"
+            app:layout_constraintTop_toBottomOf="@id/avatar" />
+
+        <FrameLayout
+            android:id="@+id/timeLine"
+            android:layout_width="20dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/timeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/time_design_ust" />
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/timeLine"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/gelenUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/klavika"
+                    android:lines="1"
+                    android:maxEms="15"
+                    android:maxLength="30"
+                    android:text="User"
+                    android:textColor="#3A3434"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/gelenSoru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/truly"
+                    android:maxLength="100"
+                    android:text="sorular yükleniyor.."
+                    android:textColor="#635959" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/gelenCevap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/truly"
+                        android:gravity="left"
+                        android:maxLength="100"
+                        android:text="cevap yükleniyor.."
+                        android:textColor="@color/purple_500" />
+
+                    <TextView
+                        android:id="@+id/gelenKategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="right"
+                        android:maxLength="100"
+                        android:text="4 KATEGORİLİ SORULAR"
+                        android:textColor="#98939F"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/soruDurum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#D3CBCB"
+                        android:fontFamily="@font/truly"
+                        android:gravity="left"
+                        android:maxLength="100"
+                        android:padding="3dp"
+                        android:text="beklemede"
+                        android:textColor="@color/beklemede"
+                        android:textSize="11sp"
+                        />
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/onaylaButton"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:backgroundTint="@color/onaylandi"
+                        android:fontFamily="@font/klavika"
+                        android:padding="4dp"
+                        android:text="Onayla"
+                        android:textAlignment="center"
+                        android:textSize="7sp" />
+
+                    <Button
+                        android:visibility="gone"
+                        android:id="@+id/reddetButton"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="2dp"
+                        android:backgroundTint="@color/reddedildi"
+                        android:fontFamily="@font/klavika"
+                        android:padding="4dp"
+                        android:text="Reddet"
+                        android:textAlignment="center"
+                        android:textSize="7sp" />
+
+                    <TextView
+                        android:id="@+id/soruGecenZaman"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/truly"
+                        android:gravity="right"
+                        android:maxLength="100"
+                        android:text="1 gün önce"
+                        android:textColor="#B0ADB3"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

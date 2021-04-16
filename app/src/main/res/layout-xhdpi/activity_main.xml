@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/game_screen1"
+    tools:context=".Activitys.MainActivity">
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/bound" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/soundAnim"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/heart1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="9dp"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="9dp"
+            android:src="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/heart3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="9dp"
+            android:src="@drawable/heart" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="220dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/title" />
+
+    <ImageView
+        android:id="@+id/start_button"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/basla_button" />
+
+    <ImageView
+        android:id="@+id/score_button"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/start_button"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/skor_button" />
+
+    <ImageView
+        android:id="@+id/soruGonder_button"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/score_button"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/soru_gonder_button" />
+
+
+    <ImageView
+        android:id="@+id/exit_button"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/soruGonder_button"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/cikis_button" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/klavika"
+        android:text="v1.0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

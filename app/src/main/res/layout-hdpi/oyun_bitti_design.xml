@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:elevation="5dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="140dp"
+            android:background="@color/beklemede">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/game_over_back" />
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:maxLength="20"
+                    android:id="@+id/userKutusu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="Emre Küçük"
+                    android:ellipsize="end"
+                    android:ems="6"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/truly"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tarihKutusu"
+                    android:gravity="right"
+                    android:text="14.02.2021 15:41"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkColor"
+                    android:textSize="15sp"
+                    android:lines="1"
+                    android:fontFamily="@font/truly"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <pl.droidsonroids.gif.GifTextView
+                    android:id="@+id/skorKutusu"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/can_kutusu"
+                    android:fontFamily="@font/klavika"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:text="9800"
+                    android:textColor="#FFEB3B"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <pl.droidsonroids.gif.GifTextView
+                    android:id="@+id/zamanKutusu"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/zaman_kutu"
+                    android:fontFamily="@font/klavika"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:text="4:00"
+                    android:textColor="#DADADA"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/machine"
+                android:gravity="center"
+                android:text="Oyun Bitti"
+                android:textColor="#574F4F"
+                android:textFontWeight="1000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/truly"
+                android:gravity="center"
+                android:text="Tekrar oynamak ister misin?"
+                android:textColor="#574F4F"
+                android:textSize="22sp" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/okeyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/onaylandi"
+                    android:fontFamily="@font/kabrio"
+                    android:text="evet" />
+
+                <Button
+                    android:id="@+id/iptalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#7800FF"
+                    android:fontFamily="@font/kabrio"
+                    android:text="iptal" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -8,8 +8,7 @@
     android:animateLayoutChanges="true"
     android:background="@drawable/game_screen_list"
     android:orientation="vertical"
-    tools:context=".GameActivity">
-
+    tools:context=".Activitys.GameActivity">
 
 
     <RelativeLayout
@@ -21,30 +20,30 @@
 
         <pl.droidsonroids.gif.GifTextView
             android:id="@+id/zaman"
-            android:background="@drawable/zaman_kutu"
             android:layout_width="120dp"
             android:layout_height="60dp"
-            android:gravity="center"
             android:layout_alignParentRight="true"
             android:layout_margin="10dp"
+            android:background="@drawable/zaman_kutu"
             android:fontFamily="@font/klavika"
-            android:text="4:00"
+            android:gravity="center"
             android:paddingRight="10dp"
+            android:text="4:00"
             android:textColor="#DADADA"
             android:textSize="19sp"
             android:textStyle="bold" />
 
         <pl.droidsonroids.gif.GifTextView
-            android:background="@drawable/can_kutusu"
             android:id="@+id/anlikPuanText"
             android:layout_width="120dp"
             android:layout_height="60dp"
             android:layout_alignParentLeft="true"
             android:layout_margin="10dp"
-            android:paddingLeft="20dp"
+            android:background="@drawable/can_kutusu"
             android:fontFamily="@font/klavika"
-            android:text="0"
             android:gravity="center"
+            android:paddingLeft="20dp"
+            android:text="0"
             android:textColor="#FFEB3B"
             android:textSize="19sp"
             android:textStyle="bold" />
@@ -100,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:fontFamily="@font/kabrio"
+            android:fontFamily="@font/klavika"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -267,6 +266,20 @@
             android:textStyle="bold"
             android:visibility="gone" />
 
+        <pl.droidsonroids.gif.GifTextView
+            android:id="@+id/harf10"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/hexa"
+            android:fontFamily="@font/kabrio"
+            android:gravity="center"
+            android:maxLength="1"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
 
     </LinearLayout>
 
@@ -279,16 +292,33 @@
         android:orientation="horizontal"
         android:visibility="gone">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/microphone"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/microphone" />
+
         <EditText
             android:id="@+id/cevapAlButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
             android:layout_toLeftOf="@+id/cevapGonderButton"
+            android:layout_toRightOf="@id/microphone"
+            android:background="@drawable/question_input_type"
+            android:drawableStart="@drawable/question_icon_design"
+            android:drawablePadding="15dp"
             android:fontFamily="@font/klavika"
             android:hint="Tahmini girin.."
+            android:lines="1"
+            android:maxLength="10"
+            android:padding="5dp"
             android:textColor="#D3D3D3" />
 
         <com.airbnb.lottie.LottieAnimationView
@@ -343,7 +373,7 @@
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
+        android:layout_margin="7dp"
         app:lottie_rawRes="@raw/sound_anim" />
 
     <com.airbnb.lottie.LottieAnimationView
@@ -370,34 +400,32 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_toLeftOf="@+id/soundAnim"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content">
+        android:layout_toLeftOf="@+id/soundAnim"
+        android:orientation="horizontal">
 
 
-    <ImageView
-        android:id="@+id/can1"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_alignParentLeft="true"
-        android:layout_margin="9dp"
-        android:src="@drawable/heart"
-        />
+        <ImageView
+            android:id="@+id/can1"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="9dp"
+            android:src="@drawable/heart" />
 
-    <ImageView
-        android:id="@+id/can2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_margin="9dp"
-        android:src="@drawable/heart"
-        />
+        <ImageView
+            android:id="@+id/can2"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_margin="9dp"
+            android:src="@drawable/heart" />
 
-    <ImageView
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_margin="9dp"
-        android:src="@drawable/heart_bos" />
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_margin="9dp"
+            android:src="@drawable/heart_bos" />
 
 
     </LinearLayout>

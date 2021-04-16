@@ -5,13 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="@drawable/game_screen1"
+    tools:context=".Activitys.MainActivity">
 
 
-    <pl.droidsonroids.gif.GifImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/main_background" />
 
 
     <com.airbnb.lottie.LottieAnimationView
@@ -83,7 +80,7 @@
         android:src="@drawable/skor_button" />
 
     <ImageView
-        android:id="@+id/soru_gonder_button"
+        android:id="@+id/soruGonder_button"
         android:layout_width="170dp"
         android:layout_height="80dp"
         android:layout_below="@+id/score_button"
@@ -95,7 +92,7 @@
         android:id="@+id/exit_button"
         android:layout_width="170dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/soru_gonder_button"
+        android:layout_below="@+id/soruGonder_button"
         android:layout_centerHorizontal="true"
         android:src="@drawable/cikis_button" />
 

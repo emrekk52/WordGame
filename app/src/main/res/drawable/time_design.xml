@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+
+        <layer-list>
+
+            <item>
+                <shape android:shape="rectangle">
+
+                    <gradient android:angle="45" android:endColor="#5C17CC" android:startColor="#8000FF" />
+                    <corners android:topLeftRadius="15dp" android:topRightRadius="15dp"/>
+                    <padding android:top="2dp" />
+                </shape>
+
+
+            </item>
+            <item>
+
+                <bitmap android:gravity="center|top" android:src="@drawable/circle" />
+            </item>
+
+        </layer-list>
+
+    </item>
+
+
+</selector>

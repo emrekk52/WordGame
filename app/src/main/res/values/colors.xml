@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="darkColor">#DDDDDD</color>
+    <color name="lightColor">#F6F6F6</color>
+    <color name="beklemede">#FFDD00</color>
+    <color name="onaylandi">#1DAF3D</color>
+    <color name="reddedildi">#C81919</color>
+
 </resources>

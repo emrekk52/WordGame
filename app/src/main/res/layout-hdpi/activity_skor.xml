@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".Activitys.SkorActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/ustBar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/game_screen"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:onClick="onClick"
+            android:padding="2dp"
+            android:src="@drawable/back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/skorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/kabrio"
+            android:text="Skor Tablosu"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+        <TextView
+            android:id="@+id/userText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:ems="10"
+            android:fontFamily="@font/klavika"
+            android:maxLines="1"
+            android:text="Merhaba, misafir"
+            android:textColor="#E3E3E3"
+            android:textSize="18sp"
+            app:layout_constraintRight_toLeftOf="@+id/sizText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/skorText" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#D3FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/skorText">
+
+
+            <TextView
+                android:id="@+id/mySkor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/klavika"
+                android:text="6,780"
+                android:maxLength="6"
+                android:textColor="#989898"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/mySonSkor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/klavika"
+                android:maxLength="6"
+                android:text="6,780"
+                android:textColor="#C1C1C1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/myZaman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/klavika"
+                android:text="Zaman 3:02"
+                android:textColor="#6E6E6E"
+                android:textSize="13sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sizText"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="100dp"
+            android:padding="2dp"
+            android:visibility="invisible"
+            app:cardBackgroundColor="#920AF3"
+            app:layout_constraintLeft_toRightOf="@+id/card"
+            app:layout_constraintRight_toLeftOf="@+id/card"
+            app:layout_constraintTop_toTopOf="@+id/card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/kabrio"
+                android:text="Siz"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/challangePlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/secondLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/secondAvatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avatar2" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/second" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="15dp"
+                        android:layout_above="@+id/secondSkor"
+                        android:background="#AEAEAE" />
+
+                    <TextView
+                        android:id="@+id/secondUsername"
+                        android:layout_width="80dp"
+                        android:layout_height="18dp"
+                        android:layout_above="@+id/secondSkor"
+                        android:ellipsize="end"
+                        android:ems="5"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="Emre Can"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/secondSkor"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/secondAvatar"
+                        android:ellipsize="end"
+                        android:ems="5"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="15,685"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/firstLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/firstAvatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avatar1" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/first" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="15dp"
+                        android:layout_above="@+id/firstSkor"
+                        android:background="#FAC500" />
+
+                    <TextView
+                        android:id="@+id/firstUsername"
+                        android:layout_width="80dp"
+                        android:layout_height="18dp"
+                        android:layout_above="@+id/firstSkor"
+                        android:ellipsize="end"
+                        android:ems="5"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="Emre Can"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/firstSkor"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/firstAvatar"
+                        android:ellipsize="end"
+                        android:ems="5"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="15,685"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/thirdLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+
+                    <ImageView
+                        android:id="@+id/thirdAvatar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/avatar3" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/third" />
+
+                    <View
+                        android:layout_width="80dp"
+                        android:layout_height="15dp"
+                        android:layout_above="@+id/thirdSkor"
+                        android:background="#A38103" />
+
+                    <TextView
+                        android:id="@+id/thirdUsername"
+                        android:layout_width="80dp"
+                        android:layout_height="18dp"
+                        android:layout_above="@+id/thirdSkor"
+                        android:ellipsize="end"
+                        android:ems="5"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="Emre Can"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/thirdSkor"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thirdAvatar"
+                        android:ellipsize="end"
+                        android:ems="5"
+                        android:fontFamily="@font/klavika"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:text="15,685"
+                        android:textAlignment="center" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/challangePlace" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
